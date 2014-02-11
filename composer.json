@@ -1,0 +1,22 @@
+{
+	"name": "fballiano/p4a-products-catalog",
+	"description": "Sample application for P4A 4.x",
+	"license": "LGPL-3.0+",
+    "authors": [
+        {
+            "name": "Fabrizio Balliano",
+            "email": "fabrizio@fabrizioballiano.it",
+            "homepage": "http://fabrizioballiano.it",
+            "role": "Developer"
+        },
+        {
+            "name": "Andrea Giardina",
+            "email": "andrea.giardina@crealabs.it",
+            "homepage": "http://agiadina.net",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "zendframework/zendframework1": "1.12.x"
+    }
+}
