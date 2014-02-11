@@ -18,5 +18,10 @@
     ],
     "require": {
         "zendframework/zendframework1": "1.12.x"
-    }
+    },
+	"autoload": {
+		"psr-4": {
+			"Pc\\": "PC/"
+		}
+	}
 }
