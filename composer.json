@@ -21,7 +21,12 @@
     },
 	"autoload": {
 		"psr-4": {
-			"Pc\\": "PC/"
-		}
+			"PC\\": "PC/",
+			"P4A\\": "../p4a4/p4a/P4A/"
+		},
+		"files": [
+				"../p4a4/p4a/functions.php",
+				"../p4a4/p4a/constants.php"
+		]
 	}
 }

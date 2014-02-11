@@ -49,7 +49,8 @@ define("P4A_AJAX_ENABLED", false);
 // Path (on server) where P4A will write all code transferred via AJAX
 // define("P4A_AJAX_DEBUG", "/tmp/p4a_ajax_debug.txt");
 
-require_once dirname(__FILE__) . '/../../p4a.php';
+// Requiring composer's autoloader (all is configured by composer.json)
+require 'vendor/autoload.php';
 
 // Check Installation and configuration.
 // This lines should be removed after the first run.
@@ -60,5 +61,4 @@ if (is_string($check)) {
     die();
 }
 
-\P4A\Autoload::singleton()->addNamespace("PC", __DIR__ . DIRECTORY_SEPARATOR . "PC");
 \PC\PC::singleton()->main();
