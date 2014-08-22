@@ -6,8 +6,8 @@ database schema into your local MySQL.
 
 To do this simply write:
 ```
-mysqladmin create p4a_products_catalogue
-mysql p4a_products_catalogue < db_dump_mysql.sql
+mysqladmin create p4a_products_catalog
+mysql p4a_products_catalog < db_dump_mysql.sql
 ```
 
 Now you can open your browser to:
