@@ -57,7 +57,7 @@ class PC extends P4A
     public function __construct()
     {
         parent::__construct();
-        $this->setTitle("Products Catalogue");
+        $this->setTitle("Products Catalog");
 
         // Menu
         $this->build("P4A\Widget\Menu", "menu");
