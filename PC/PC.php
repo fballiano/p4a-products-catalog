@@ -64,9 +64,11 @@ class PC extends P4A
 
         $this->menu->addItem("products")
             ->setAccessKey("r")
+			->setIcon("shop")
             ->implement("onclick", $this, "menuClick");
 
-        $this->menu->addItem("support_tables", "Support Tables");
+        $this->menu->addItem("support_tables", "Support Tables")
+			->setIcon("folder");
 
         $this->menu->items->support_tables->addItem("categories")
             ->implement("onclick", $this, "menuClick");
@@ -75,6 +77,7 @@ class PC extends P4A
             ->implement("onclick", $this, "menuClick");
 
         $this->menu->addItem("change_language")
+			->setIcon("language")
             ->implement("onclick", $this, "openLanguagesPopup");
 
         // Data sources
@@ -113,7 +116,7 @@ class PC extends P4A
 
         if ($username == "p4a" and $password == md5("p4a")) {
             $this->messageInfo("Login successful");
-            $this->openMask("PC\Brands");
+            $this->openMask("PC\Products");
         } else {
             $this->messageError("Login failed");
             $this->loginInfo();

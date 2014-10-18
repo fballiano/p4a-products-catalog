@@ -82,24 +82,24 @@ class Products extends Base
         $this->build("P4A\Widget\Button", "cmd_search")
             ->setLabel("Go")
             ->implement("onclick", $this, "search");
-        $this->build("p4a_fieldset", "fs_search")
+        $this->build("P4A\Widget\Fieldset", "fs_search")
             ->setLabel("Search")
             ->anchor($this->txt_search)
             ->anchorLeft($this->cmd_search);
 
         // Toolbar
-        $this->build("p4a_full_toolbar", "toolbar")
+        $this->build("P4A\Widget\Toolbar\Full", "toolbar")
             ->setMask($this);
 
         // Table
-        $this->build("p4a_table", "table")
+        $this->build("P4A\Widget\Table", "table")
             ->setWidth(600)
             ->setSource($this->source)
             ->setVisibleCols(array("product_id", "model", "date_arrival", "category", "brand"))
             ->showNavigationBar();
         $this->table->cols->product_id->setLabel("Product ID");
 
-        $this->build("p4a_fieldset", "fs_details")
+        $this->build("P4A\Widget\Fieldset", "fs_details")
             ->setLabel("Product detail")
             ->anchor($this->fields->product_id)
             ->anchorLeft($this->fields->model)
@@ -110,8 +110,8 @@ class Products extends Base
             ->anchorLeft($this->fields->discount)
             ->anchor($this->fields->picture)
             ->anchor($this->fields->is_new)
-            ->anchorLeft($this->fields->visible)
-            ->anchor($this->fields->description);
+            ->anchorLeft($this->fields->visible);
+            //->anchor($this->fields->description);
 
         $this->frame
             ->anchor($this->fs_search)
